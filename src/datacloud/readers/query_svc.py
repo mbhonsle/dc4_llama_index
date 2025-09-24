@@ -7,10 +7,11 @@ import httpx
 import logging
 from typing import Dict, Any, List
 from pydantic import BaseModel
-from src.datacloud.util.sf_token_exchange import SalesforceTokenGenerator
+from pydc_auth import SalesforceTokenGenerator
 
 QUERY_SVC_ENDPOINT = 'services/data/v63.0/ssot/queryv2'
 
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 logger = logging.getLogger(__name__)
 
 
